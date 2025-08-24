@@ -1,0 +1,120 @@
+/* ====== General Styles ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* ====== Header ====== */
+header {
+  background: #2e7d32;
+  color: #fff;
+  padding: 1rem;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Intro Section (Flexbox) ====== */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+.intro-text {
+  flex: 1 1 300px;
+}
+
+.intro-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* ====== Product Section (Grid) ====== */
+.products {
+  padding: 2rem;
+  background: #e8f5e9;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card h3 {
+  margin-bottom: 0.5rem;
+  color: #2e7d32;
+}
+
+/* ====== Footer ====== */
+footer {
+  text-align: center;
+  background: #2e7d32;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ====== Media Queries ====== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .intro {
+    flex-direction: column;
+  }
+}
+
